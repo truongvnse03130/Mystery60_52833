@@ -1,4 +1,3 @@
 include:
   - board: ms60
-  - board: nice_nano
     shield: settings_reset
