@@ -3,7 +3,7 @@
 
 if BOARD_MS60
 
-config ZMK_KEYBOARD_NAME
+config BOARD
 	default "Mystery60"
 
 if USB
