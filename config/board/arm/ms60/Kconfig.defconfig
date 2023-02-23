@@ -4,7 +4,7 @@
 if BOARD_MS60
 
 config BOARD
-	default "Mystery60"
+	default "ms60"
 
 if USB
 
@@ -29,6 +29,6 @@ config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
 config ZMK_KEYBOARD_NAME
-	default "BT60"
+	default "MS60"
 
 endif BOARD_MS60
