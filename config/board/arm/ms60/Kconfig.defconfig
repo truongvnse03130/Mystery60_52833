@@ -31,4 +31,4 @@ config ZMK_BATTERY_VOLTAGE_DIVIDER
 config ZMK_KEYBOARD_NAME
 	default "MS60"
 
-endif BOARD_MS60
+endif# BOARD_MS60
