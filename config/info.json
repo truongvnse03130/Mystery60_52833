@@ -16,6 +16,7 @@
         { "label": "-", "row": 0, "col": 11, "x": 11, "y": 0 },
         { "label": "=", "row": 0, "col": 12, "x": 12, "y": 0 },
         { "label": "Bksp", "row": 0, "col": 13, "x": 13, "y": 0 },
+        { "label": "Bksp", "row": 0, "col": 14, "x": 14, "y": 0 },
 
         { "label": "Tab", "row": 1, "col": 0, "x": 0, "y": 1, "w": 1.5 },
         { "label": "Q", "row": 1, "col": 1, "x": 1.5, "y": 1 },
@@ -44,7 +45,6 @@
         { "label": "L", "row": 2, "col": 9, "x": 9.75, "y": 2 },
         { "label": ";", "row": 2, "col": 10, "x": 10.75, "y": 2 },
         { "label": "'", "row": 2, "col": 11, "x": 11.75, "y": 2 },
-        { "label": "Bksp", "row": 0, "col": 14, "x": 14, "y": 0 },
         { "label": "Enter", "row": 2, "col": 13, "x": 12.75, "y": 2, "w":2.25 },
 
         { "label": "LShift", "row": 3, "col": 0, "x": 0, "y": 3, "w":2.25 },
