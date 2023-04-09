@@ -1,10 +1,14 @@
-# Copyright (c) 2021 Nick Winans
+# Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
 if BOARD_MS60
 
+config BOARD
+	default "ms60"
+
 config ZMK_KEYBOARD_NAME
-	default "Mystery_60"
+	default "Mystery 60 Bluetooth"
+
 if USB
 
 config USB_NRFX
@@ -29,7 +33,5 @@ config ZMK_EXT_POWER
 
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
-	
-endif # BOARD_MS60
 
-
+endif # 
