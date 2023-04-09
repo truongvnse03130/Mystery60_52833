@@ -155,29 +155,41 @@
 };
 
 &flash0 {
-  partitions {
-    compatible = "fixed-partitions";
-    #address-cells = <1>;
-    #size-cells = <1>;
+	/*
+	 * For more information, see:
+	 * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+	 */
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
 
-    sd_partition: partition@0 {
-      label = "mbr";
-      reg = <0x00000000 0x00001000>;
-    };
+		sd_partition: partition@0 {
+			label = "softdevice";
+			reg = <0x00000000 0x00026000>;
+		};
+		code_partition: partition@26000 {
+			label = "code_partition";
+			reg = <0x00026000 0x00046000>;
+		};
 
-    code_partition: partition@1000 {
-      label = "code_partition";
-      reg = <0x00001000 0x0006b000>;
-    };
+		/*
+		 * The flash starting at 0x0006c000 and ending at
+		 * 0x00073fff is reserved for use by the application.
+		 */
 
-    storage_partition: partition@6c000 {
-      label = "storage";
-      reg = <0x0006c000 0x00008000>;
-    };
+		/*
+		 * Storage partition will be used by FCB/LittleFS/NVS
+		 * if enabled.
+		 */
+		storage_partition: partition@6c000 {
+			label = "storage";
+			reg = <0x0006c000 0x00008000>;
+		};
 
-    boot_partition: partition@74000 {
-      label = "adafruit_boot";
-      reg = <0x00074000 0x0000c000>;
-    };
-  };
+		boot_partition: partition@74000 {
+			label = "adafruit_boot";
+			reg = <0x00074000 0x0000c000>;
+		};
+	};
 };
