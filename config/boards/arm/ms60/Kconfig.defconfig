@@ -7,7 +7,7 @@ config BOARD
 	default "ms60"
 
 config ZMK_KEYBOARD_NAME
-	default "Mystery 60 Bluetooth"
+	default "Mystery 60 Ble"
 
 if USB
 
