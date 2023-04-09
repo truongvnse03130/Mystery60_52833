@@ -154,18 +154,16 @@
 	};
 };
 
-
-& flash0 {
+&flash0 {
  	 partitions {
    		 compatible = "fixed-partitions";
-   		 # address-cells = <1>;
-   		 # size-cells = <1>;
+   		 #address-cells = <1>;
+   		 #size-cells = <1>;
 
 		sd_partition: partition@0 {
       			label = "mbr";
       			reg = <0x00000000 0x00001000>;
-    			};
-		};
+    		};
 		
 		code_partition: partition@1000 {
       			label = "code_partition";
