@@ -19,8 +19,6 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
-		zephyr,console = &cdc_acm_uart;
-		zmk,battery = &vbatt;
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 		zmk,underglow = &led_strip;
@@ -121,6 +119,10 @@
 	status = "okay"; 
 };
 
+&usbd {
+	status = "okay";
+};
+
 
 &spi0 {
 	compatible = "nordic,nrf-spim";
@@ -143,14 +145,6 @@
 		spi-one-frame = <0x70>;
 		spi-zero-frame = <0x40>;
 		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-	};
-};
-
-&usbd {
-	status = "okay";
-	cdc_acm_uart: cdc_acm_uart {
-		compatible = "zephyr,cdc-acm-uart";
-		label = "CDC_ACM_0";
 	};
 };
 
